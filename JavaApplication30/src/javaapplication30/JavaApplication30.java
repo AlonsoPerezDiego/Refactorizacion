@@ -11,27 +11,16 @@ package javaapplication30;
  */
 public class JavaApplication30 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static boolean p = false;
     public static void main(String[] args) {
-        int numDigitos=0;
-        int ndigitos=0;
+        int numDigitos;
+        int calcDigit;
         Refac objeto=new Refac();
         numDigitos=objeto.pedirNumDigitos();
         for (int i = 1; i <= 99999; i++) {
-            int divisionEntera = i;
+            calcDigit = objeto.calculaDigitos(i);
 
-            int contador = 0;
-
-            while (divisionEntera != 0) {
-                divisionEntera = divisionEntera / 10;
-                contador++;
-            }
-            ndigitos = contador;
-
-            if (ndigitos == numDigitos) {
+            if (calcDigit == numDigitos) {
                 if (i < 4)
                     p = true;
                 else  {

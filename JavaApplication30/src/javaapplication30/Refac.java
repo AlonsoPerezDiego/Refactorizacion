@@ -20,5 +20,13 @@ public class Refac {
         }
         return numDigitos;
     }
-    
+    public int calculaDigitos(int numero){
+        int divisionEntera = numero;
+        int contador = 0;
+        while (divisionEntera != 0) {
+            divisionEntera = divisionEntera / 10;
+            contador++;
+        }
+        return contador;
+    }
 }
