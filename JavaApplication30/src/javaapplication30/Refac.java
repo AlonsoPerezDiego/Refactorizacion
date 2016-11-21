@@ -21,7 +21,7 @@ public class Refac {
         return numDigitos;
     }
 
-    public int calculaDigitos(int numero) {
+    public int calculaDigitos(int numero) {//Number of digits
         int divisionEntera = numero;
         int contador = 0;
         while (divisionEntera != 0) {
@@ -29,26 +29,6 @@ public class Refac {
             contador++;
         }
         return contador;
-    }
-
-    public int siNo(int numero) {
-        int contador1 = 0;
-        int i1 = 1;
-        int limite = (numero - 1) / 2;
-        if (limite % 2 == 0) {
-            limite--;
-        }
-
-        while (i1 <= limite) {
-            if (numero % i1 == 0) {
-                contador1++;
-            }
-            i1 += 2;
-            if (contador1 == 2) {
-                i1 = limite + 1;
-            }
-        }
-        return contador1;
     }
     
     public boolean siIEsMenorA4(boolean primo, int numero){
