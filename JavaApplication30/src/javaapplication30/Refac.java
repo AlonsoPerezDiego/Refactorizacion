@@ -51,7 +51,7 @@ public class Refac {
         return contador1;
     }
 
-    public int siNoEsPrimo(int numero) {
+    public int sinUnoDosTres(int numero) {
         int contador1 = 0;
         int i1 = 1;
         int limite = (numero - 1) / 2;
