@@ -12,15 +12,16 @@ import javax.swing.JOptionPane;
  * @author Diego
  */
 public class Refac {
-    
-    public int pedirNumDigitos(){//Method to ask for "numDigitos"
+
+    public int pedirNumDigitos() {//Method to ask for "numDigitos"
         int numDigitos = Integer.parseInt(JOptionPane.showInputDialog("Introducir nº de cifras."));
-        while(numDigitos<0|numDigitos>5){
+        while (numDigitos < 0 | numDigitos > 5) {
             numDigitos = Integer.parseInt(JOptionPane.showInputDialog("Introducir nº de cifras (Entre 0 y 5)."));
         }
         return numDigitos;
     }
-    public int calculaDigitos(int numero){
+
+    public int calculaDigitos(int numero) {
         int divisionEntera = numero;
         int contador = 0;
         while (divisionEntera != 0) {
@@ -28,5 +29,45 @@ public class Refac {
             contador++;
         }
         return contador;
+    }
+
+    public int siNo(int numero) {
+        int contador1 = 0;
+        int i1 = 1;
+        int limite = (numero - 1) / 2;
+        if (limite % 2 == 0) {
+            limite--;
+        }
+
+        while (i1 <= limite) {
+            if (numero % i1 == 0) {
+                contador1++;
+            }
+            i1 += 2;
+            if (contador1 == 2) {
+                i1 = limite + 1;
+            }
+        }
+        return contador1;
+    }
+
+    public int siNoEsPrimo(int numero) {
+        int contador1 = 0;
+        int i1 = 1;
+        int limite = (numero - 1) / 2;
+        if (limite % 2 == 0) {
+            limite--;
+        }
+
+        while (i1 <= limite) {
+            if (numero % i1 == 0) {
+                contador1++;
+            }
+            i1 += 2;
+            if (contador1 == 2) {
+                i1 = limite + 1;
+            }
+        }
+        return contador1;
     }
 }
