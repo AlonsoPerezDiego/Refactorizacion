@@ -26,9 +26,7 @@ public class JavaApplication30 {
                 } else if (i % 2 == 0) {
                     esPrimo = false;
                 } else {
-                    int metodo = objeto.sinUnoDosTres(i);
-
-                    if (metodo == 1) {
+                    if (objeto.sinUnoDosTres(i) == 1) {
                         esPrimo = true;
                     }
                 }
