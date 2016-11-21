@@ -21,15 +21,7 @@ public class JavaApplication30 {
         for (int i = 1; i <= 99999; i++) {
             calcDigit = objeto.calculaDigitos(i);
             if (calcDigit == numDigitos) {
-                if (i < 4) {
-                    esPrimo = true;
-                } else if (i % 2 == 0) {
-                    esPrimo = false;
-                } else {
-                    if (objeto.sinUnoDosTres(i) == 1) {
-                        esPrimo = true;
-                    }
-                }
+                esPrimo = objeto.siIEsMenorA4(esPrimo, i);
                 if (esPrimo == true) {
                     System.out.println(i);
                 }

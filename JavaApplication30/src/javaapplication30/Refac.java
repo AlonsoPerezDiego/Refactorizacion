@@ -50,7 +50,20 @@ public class Refac {
         }
         return contador1;
     }
-
+    
+    public boolean siIEsMenorA4(boolean primo, int numero){
+        if (numero < 4) {
+                    primo = true;
+                } else if (numero % 2 == 0) {
+                    primo = false;
+                } else {
+                    if (sinUnoDosTres(numero) == 1) {
+                        primo = true;
+                    }
+                }
+        return primo;
+    }
+    
     public int sinUnoDosTres(int numero) {
         int contador1 = 0;
         int i1 = 1;
@@ -58,7 +71,6 @@ public class Refac {
         if (limite % 2 == 0) {
             limite--;
         }
-
         while (i1 <= limite) {
             if (numero % i1 == 0) {
                 contador1++;
