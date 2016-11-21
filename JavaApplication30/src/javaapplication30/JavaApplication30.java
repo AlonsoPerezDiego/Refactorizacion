@@ -11,7 +11,7 @@ package javaapplication30;
  */
 public class JavaApplication30 {
 
-    public static boolean primo = false;
+    public static boolean esPrimo = false;
 
     public static void main(String[] args) {
         int numDigitos;
@@ -20,21 +20,19 @@ public class JavaApplication30 {
         numDigitos = objeto.pedirNumDigitos();
         for (int i = 1; i <= 99999; i++) {
             calcDigit = objeto.calculaDigitos(i);
-
             if (calcDigit == numDigitos) {
                 if (i < 4) {
-                    primo = true;
+                    esPrimo = true;
                 } else if (i % 2 == 0) {
-                    primo = false;
+                    esPrimo = false;
                 } else {
                     int metodo = objeto.siNoEsPrimo(i);
 
                     if (metodo == 1) {
-                        primo = true;
+                        esPrimo = true;
                     }
                 }
-
-                if (primo == true) {
+                if (esPrimo == true) {
                     System.out.println(i);
                 }
             }
