@@ -44,7 +44,7 @@ public class Refac {
         return primo;
     }
     
-    public int sinUnoDosTres(int numero) {
+    private int sinUnoDosTres(int numero) {
         int contador1 = 0;
         int i1 = 1;
         int limite = (numero - 1) / 2;
